@@ -11,6 +11,8 @@ interface HomeProps {
 
 export default async function Home({ searchParams }: HomeProps) {
   const listings = await getListings(searchParams);
+  console.log(searchParams);
+  console.log(listings.length);
   const currentUser = await getCurrentUser();
 
   if (listings.length === 0) {
