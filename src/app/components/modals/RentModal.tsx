@@ -65,6 +65,7 @@ const RentModal = () => {
 
   const Map = useMemo(() => dynamic(() => import('../Map'), { ssr: false }), [location]);
 
+  // This function allows you to dynamically set the value of a registered field and have the options to validate and update the form state. At the same time, it tries to avoid unnecessary rerender.
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
       shouldDirty: true,

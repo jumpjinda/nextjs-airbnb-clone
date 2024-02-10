@@ -6,8 +6,6 @@ interface HeadingProps {
   center?: boolean;
 }
 
-import React from "react";
-
 const Heading: React.FC<HeadingProps> = ({ title, subtitle, center }) => {
   return (
     <div className={center ? "text-center" : "text-start"}>
